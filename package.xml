@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Fishpig_SeoTagUrls</name>
+    <version>1.0.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://fishpig.co.uk/license.txt">FishPig EULA</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Convert your tag URLs to proper URLs</summary>
+    <description>Convert your tag URLs to proper URLs</description>
+    <notes>First stable public release</notes>
+    <authors><author><name>fishpig</name><user>fishpig</user><email>ben@fishpig.co.uk</email></author></authors>
+    <date>2013-09-26</date>
+    <time>17:36:25</time>
+    <contents><target name="magecommunity"><dir name="Fishpig"><dir name="SeoTagUrls"><dir name="Controller"><file name="Router.php" hash="a92381f34480b146a1e66c5accd60016"/></dir><dir name="Helper"><file name="Data.php" hash="b0a8ef8c76fe8d06238cfea3881335ec"/></dir><dir name="etc"><file name="adminhtml.xml" hash="dd049d0ca72cb94aacb10a002418fe6d"/><file name="config.xml" hash="d8fe259248ec7b9754420a2405c29ac0"/><file name="system.xml" hash="7ff3ce8ed399e27bf3f0a882de011666"/></dir></dir></dir></target><target name="mageweb"><dir name="app"><dir name="etc"><dir name="modules"><file name="Fishpig_SeoTagUrls.xml" hash="6179d3d9e1a24fc73bf4de5550aef39b"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

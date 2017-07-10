@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Fishpig_SeoTagUrls>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Tag />
+			</depends>
+		</Fishpig_SeoTagUrls>
+	</modules>
+</config>
