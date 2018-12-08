@@ -51,10 +51,13 @@ class Fishpig_SeoTagUrls_Helper_Data extends Mage_Core_Helper_Abstract
 	{
 		$resource = Mage::getSingleton('core/resource');
 		$read = $resource->getConnection('core_read');
+
+		$select = $read->select()->from($resource->getTableName('tag/tag'), array('tag_id', 'name'));
 		
-		$select = $read->select()
-			->from($resource->getTableName('tag/tag'), array('tag_id', 'name'));
-			
+		if (preg_match('/^[a-zA-Z0-9]{1}/', $slug, $matches)) {
+			$select->where('name LIKE ? OR name LIKE \'' . strtoupper($matches[0]) . '%\'', strtolower($matches[0]) . '%');
+		}
+
 		if ($results = $read->fetchAll($select)) {
 			foreach($results as $result) {
 				if ($this->_convertStringToSlug($result['name']) === $slug) {
